@@ -14,19 +14,28 @@
     <div class="container">
         <div class="section columns">
             <div class="column is-8 is-offset-2">
-                
                   <table class="table is-bordered is-striped is-narrow">
                     <thead>
                         <tr>
-                            <th width="10px">#</th>
-                              <th>Genero</th>
-                             
+                              <th>Genero</th> 
+                              <th>Titulo</th>
+                              <th>Nome</th>
+                              <th>Rua</th> 
                         </tr>
                     </thead>
                     <tbody>
                     {{#each result.results}}
                         <tr>
+                            <div align="center">
+                                <figure class="image is-64x64">
+                                    <img src="{{picture.large}}" alt="Team Logo">
+                                </figure>
+                            </div><br>
+
                             <td>{{ gender }}</td>  
+                            <td>{{ name.title }}</td>  
+                            <td>{{ name.first }}</td>  
+                            <td>{{ location.street }}</td>  
                         </tr>
                       {{/each}}
                     </tbody>
@@ -34,6 +43,5 @@
             </div>
         </div>
     </div>
- 
 </body>
 </html>
